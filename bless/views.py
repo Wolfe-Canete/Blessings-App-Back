@@ -3,6 +3,7 @@ from rest_framework import generics
 from .models import Blessing, Comment
 from .serializers import BlessSerializer
 from .serializers import CommentSerializer
+# wholle lotta stuff
 
 
 class BlessingList(generics.ListCreateAPIView):
