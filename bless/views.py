@@ -24,19 +24,19 @@ class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
 
 # functions for CRUD Later on
 
-# def blessing_create(request):
-#     if request.method !='POST':
-#         form = BlessingForm()
-#     else:
-#         form = BlessingForm(request.POST)
-#         if form.is_valid():
-#             blessing = form.save()
-#             return redirect('blessing_detail', pk=blessing.pk)
-#     return render(
-#         request,
-#         'blessing/blessing_form.html',
-#         {'form': form}
-# )
+def blessing_create(request):
+    if request.method !='POST':
+        form = BlessingForm()
+    else:
+        form = BlessingForm(request.POST)
+        if form.is_valid():
+            blessing = form.save()
+            return redirect('blessing_detail', pk=blessing.pk)
+    return render(
+        request,
+        'blessing/blessing_form.html',
+        {'form': form}
+)
 
 # def blessing_edit(request, pk):
 #     bless_edit = Blessing.objects.get(pk=pk)
